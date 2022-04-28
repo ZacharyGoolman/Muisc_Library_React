@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import MusicTable from './Components/MusicTable/MusicTable';
 import MusicForm from './Components/MusicForm/MusicForm';
+import NavBar from './Components/NavBar/NavBar';
 
 function App() {
   // song data coming from Django API throuhg axios call, going to send to display song component
@@ -10,7 +11,7 @@ function App() {
   
   // with the optional empty array in th elast line of this useEffect it will only run the first time the page renders
   // If we remove the optional array it will run once when the page renders and run every time it sees a variable change value on this compnent
-  // If we add a cariable name in the optional array it will run with page renders or when that value changes
+  // If we add a variable name in the optional array it will run with page renders or when that value changes
   useEffect(() => {
   getAllSongs();
 },[])
@@ -37,8 +38,9 @@ function App() {
 
   return (
     <div>
-     <MusicTable songs={songs}/>
+      <NavBar />
      <MusicForm addNewMusic={AddNewMusic}/>
+     <MusicTable songs={songs}/>
     
     </div>
   );

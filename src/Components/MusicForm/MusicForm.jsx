@@ -24,13 +24,20 @@ const MusicForm = (props) => {
             media: media,
         }
         props.addNewMusic(newEntry)
+        // These function calls will put the field values in the input boxes back to default
+        SetArtist('')
+        SetTitle('')
+        SetAlbum('')
+        SetReleaseDate('')
+        SetGenre('')
+        SetMedia('')
     }
 
 
 
 
     return ( 
-        <form onSubmit={handleSubmit}>
+        <form className='form_style' onSubmit={handleSubmit}>
         <div class="form-row">
 
           <div class="col">

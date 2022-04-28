@@ -1,0 +1,12 @@
+.nav_container {
+    background-color: black;
+    height: 100px;
+    border: 20px white;
+}
+
+
+.nav_title {
+    color: white;
+    text-align: right;
+    
+}
